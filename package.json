@@ -1,6 +1,6 @@
 {
   "name": "dezalgo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Contain async insanity so that the dark pony lord doesn't eat souls",
   "main": "dezalgo.js",
   "directories": {
