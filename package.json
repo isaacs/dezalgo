@@ -11,7 +11,7 @@
     "wrappy": "1"
   },
   "devDependencies": {
-    "tap": "^0.4.11"
+    "tap": "^1.2.0"
   },
   "scripts": {
     "test": "tap test/*.js"
