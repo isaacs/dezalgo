@@ -3,6 +3,9 @@
   "version": "1.0.3",
   "description": "Contain async insanity so that the dark pony lord doesn't eat souls",
   "main": "dezalgo.js",
+  "files": [
+    "dezalgo.js"
+  ],
   "directories": {
     "test": "test"
   },
