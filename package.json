@@ -4,7 +4,8 @@
   "description": "Contain async insanity so that the dark pony lord doesn't eat souls",
   "main": "dezalgo.js",
   "files": [
-    "dezalgo.js"
+    "bin/",
+    "lib/"
   ],
   "directories": {
     "test": "test"
@@ -14,14 +15,22 @@
     "wrappy": "1"
   },
   "devDependencies": {
-    "tap": "^12.4.0"
+    "@npmcli/eslint-config": "^4.0.0",
+    "@npmcli/template-oss": "4.6.0",
+    "tap": "^16.3.0"
   },
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tap",
+    "lint": "eslint \"**/*.js\"",
+    "postlint": "template-oss-check",
+    "template-oss-apply": "template-oss-apply --force",
+    "lintfix": "npm run lint -- --fix",
+    "snap": "tap",
+    "posttest": "npm run lint"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/npm/dezalgo"
+    "url": "https://github.com/npm/dezalgo.git"
   },
   "keywords": [
     "async",
@@ -37,10 +46,23 @@
     "HE COMES",
     "there used to be some funky unicode keywords here, but it broke the npm website on chrome, so they were removed, sorry"
   ],
-  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "author": "GitHub Inc.",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/npm/dezalgo/issues"
   },
-  "homepage": "https://github.com/npm/dezalgo"
+  "homepage": "https://github.com/npm/dezalgo",
+  "engines": {
+    "node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+  },
+  "templateOSS": {
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+    "version": "4.6.0"
+  },
+  "tap": {
+    "nyc-arg": [
+      "--exclude",
+      "tap-snapshots/**"
+    ]
+  }
 }

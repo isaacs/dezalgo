@@ -9,14 +9,15 @@ function dezalgo (cb) {
     sync = false
   })
 
-  return function zalgoSafe() {
+  return function zalgoSafe () {
     var args = arguments
     var me = this
-    if (sync)
-      asap(function() {
+    if (sync) {
+      asap(function () {
         cb.apply(me, args)
       })
-    else
+    } else {
       cb.apply(me, args)
+    }
   }
 }
